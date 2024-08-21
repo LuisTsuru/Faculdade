@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex3 - Calculadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        input{
+            margin: 2px;
+        }
+        .var{
+            size: 3;
+            padding: 10px;
+            background-color: #EEE;
+            border-color: #CCC;
+            border-width: 1px;
+        }
+        .result{
+            width: 10;
+            height: 37px;
+            border-color: #CCC;
+            border-width: 1px;
+            text-align: center;
+            font-size: 10px;
+        }
+        button{
+            width: 37px;
+            height: 37px;
+            background-color: #FF8000;
+            border: none;
+            font-size: 14px;
+            color: white;
+        }
+        button:hover{
+            background-color: #EE5000;
+        }
+        .limp{
+            width: 50px;
+            font-size: 10px;
+            color: white;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div>   
+        <input type="number" id="var1" class="var">
+        <input type="number" id="var2" class="var">
+        =
+        <button onclick="soma()">+</button>
+        <input type="text" class="result" id="res1" placeholder="Resultado">
+        <button onclick="limpsoma()">Limpar</button>
+    </div>
+
+    <div>   
+        <input type="number" id="var3" class="var">
+        <input type="number" id="var4" class="var">
+        =
+        <button onclick="sub()">-</button>
+        <input type="text" class="result" id="res2" placeholder="Resultado">
+        <button class="limp2" onclick="limpsub()">Limpar</button>
+    </div>
+
+    <div>  
+        <input type="number" id="var5" class="var">
+        <input type="number" id="var6" class="var">
+        =
+        <button onclick="mult()">*</button>
+        <input type="text" class="result" id="res3"  placeholder="Resultado">
+        <button class="limp3" onclick="limpmulti()">Limpar</button>
+    </div>
+
+    <div>   
+        <input type="number" id="var7" class="var">
+        <input type="number" id="var8" class="var">
+        =
+        <button onclick="div()">/</button>
+        <input type="text" class="result" id="res4"  placeholder="Resultado">
+        <button class="limp4" onclick="limpdiv()">Limpar</button>
+    </div>
+    <p>Tamanho do input e do "resultado" nao especificado</p>
+
+    <script>
+        function soma(){
+            var var1 = parseInt(document.getElementById("var1").value);
+            var var2 = parseInt(document.getElementById("var2").value);
+            var soma = var1 + var2;
+            document.getElementById("res1").value = soma;
+        }
+        function limpsoma(){
+            document.getElementById("res1").value = '';
+        }
+
+        function sub(){
+            var var1 = parseInt(document.getElementById("var3").value);
+            var var2 = parseInt(document.getElementById("var4").value);
+            var soma = var1 - var2;
+            document.getElementById("res2").value = soma;
+        }
+        function limpsub(){
+            document.getElementById("res2").value = '';
+        }
+
+        function mult(){
+            var var1 = parseInt(document.getElementById("var5").value);
+            var var2 = parseInt(document.getElementById("var6").value);
+            var soma = var1 * var2;
+            document.getElementById("res3").value = soma;
+        }
+        function limpmulti(){
+            document.getElementById("res3").value = '';
+        }
+
+        function div(){
+            var var1 = parseInt(document.getElementById("var7").value);
+            var var2 = parseInt(document.getElementById("var8").value);
+            var soma = var1 / var2;
+            document.getElementById("res4").value = soma;
+        }
+        function limpdiv(){
+            document.getElementById("res4").value = '';
+        }
+
+    </script>
+</body>
+</html>
